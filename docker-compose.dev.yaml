@@ -1,13 +1,11 @@
-version: '3.7'
-
 services:
-  app:
+  blaze:
     build: 
       context: .
       dockerfile: Dockerfile
     restart: always
-    hostname: smokey
+    hostname: blaze
     ports:
       - 3000:3000
     volumes:
-      - ./public:/app/public
+      - ./config.json:/app/public/config.json

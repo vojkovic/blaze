@@ -1,13 +1,7 @@
-interface Company {
-    name: string;
-    logo: string;
-}
 interface LocationChild {
     name: string;
     api: string;
-    filesUrl: string;
-    ipv4: string;
-    ipv6: string;
+    ip: string;
     location: string;
     datacenter: string;
     bgp: boolean;
@@ -18,6 +12,5 @@ interface LocationGroup {
     locations: LocationChild[];
 }
 interface Config {
-    company: Company;
     locations: LocationGroup[];
 }
